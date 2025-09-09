@@ -24,9 +24,9 @@
         <h1>Pastelería Delicias</h1>
       </div>
       <nav class="nav">
-        <a href="#">Inicio</a>
-        <a href="#">Productos</a>
-        <a href="#">Contacto</a>
+        <a href="{{ url_for('index') }}">Inicio</a>
+        <a href="{{ url_for('productos') }}">Productos</a>
+        <a href="{{ url_for('contactanos') }}">Contacto</a>
       </nav>
       <button class="btn btn-primary">Comprar ahora</button>
     </div>

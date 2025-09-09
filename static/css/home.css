@@ -6,8 +6,8 @@
 :root{
   --bg: #f7f8fb;
   --surface: #ffffff;
-  --primary: #2563eb; /* azul */
-  --primary-600: #1e40af;
+  --primary: #f3248c; /* azul */
+  --primary-600: #eb56c6;
   --accent: #06b6d4; /* cian */
   --muted: #6b7280;
   --danger: #ef4444;
