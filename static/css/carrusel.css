@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@layer utilities {
+    @keyframes slide-z {
+        0% {
+            transform: translateZ(0);
+        }
+        100% {
+            transform: translateZ(-100%);
+        }
+        
+        66% {
+            transform: translateZ(-100%);
+       }  
+        100% {
+            transform: translateZ(0);
+        }
+    }
+
+    .animate-slide-z {
+        animation: slide-z 6s ease-in-out infinite;
+    }
+}
