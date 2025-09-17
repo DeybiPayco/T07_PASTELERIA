@@ -5,35 +5,42 @@ document.addEventListener('DOMContentLoaded', () => {
     const moonIcon = document.querySelector('.moon-icon');
     const sunIcon = document.querySelector('.sun-icon');
     
-    // Selecciona los elementos principales que cambian de color
-    const header = document.querySelector('.header');
+    // Selecciona los elementos principales que cambian de color (CORREGIDO)
+    const header = document.querySelector('.header-foursweets');
     const main = document.querySelector('.main');
     const footer = document.querySelector('.footer');
     const cards = document.querySelectorAll('.card');
 
     // 2. Define una función para aplicar o quitar el tema
     const applyTheme = (theme) => {
-        if (theme === 'dark') {
-            body.classList.add('dark-mode');
-            header.classList.add('dark-mode');
-            main.classList.add('dark-mode');
-            footer.classList.add('dark-mode');
-            cards.forEach(card => card.classList.add('dark-mode')); // Aplica a cada tarjeta
-            moonIcon.classList.add('hidden');
-            sunIcon.classList.remove('hidden');
-        } else {
-            body.classList.remove('dark-mode');
-            header.classList.remove('dark-mode');
-            main.classList.remove('dark-mode');
-            footer.classList.remove('dark-mode');
-            cards.forEach(card => card.classList.remove('dark-mode'));
-            moonIcon.classList.remove('hidden');
-            sunIcon.classList.add('hidden');
+        const isDarkMode = theme === 'dark';
+        
+        // Aplica o quita la clase 'dark-mode' a todos los elementos relevantes
+        body.classList.toggle('dark-mode', isDarkMode);
+        
+        // Verifica si los elementos existen antes de aplicar la clase
+        if (header) {
+            header.classList.toggle('dark-mode', isDarkMode);
         }
+        if (main) {
+            main.classList.toggle('dark-mode', isDarkMode);
+        }
+        if (footer) {
+            footer.classList.toggle('dark-mode', isDarkMode);
+        }
+        
+        // Itera sobre las tarjetas para aplicar el estilo
+        cards.forEach(card => card.classList.toggle('dark-mode', isDarkMode));
+        
+        // Cambia los íconos del botón
+        moonIcon.classList.toggle('hidden', isDarkMode);
+        sunIcon.classList.toggle('hidden', !isDarkMode);
     };
 
     // 3. Obtén el tema inicial y aplícalo
-    const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const currentTheme = savedTheme || (prefersDark ? 'dark' : 'light');
     applyTheme(currentTheme);
 
     // 4. Agrega el evento de clic al botón
