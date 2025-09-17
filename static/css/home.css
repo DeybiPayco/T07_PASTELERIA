@@ -175,3 +175,58 @@ a:focus,button:focus{outline:3px solid rgba(37,99,235,0.12);outline-offset:2px}
 .small{font-size:0.85rem;color:var(--muted)}
 
 /* End of file */
+.btn-theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.btn-theme-toggle img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Contenedor del menú desplegable */
+.dropdown {
+    position: relative; /* Es clave para que el contenido desplegable se posicione correctamente */
+    display: inline-block;
+}
+
+/* Contenido del menú desplegable (oculto por defecto) */
+.dropdown-content {
+    display: none; /* Oculta el menú por defecto */
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    padding: 5px 0;
+    left: 0; /* Alinea el menú a la izquierda del enlace */
+}
+
+/* Estilo para los enlaces dentro del menú desplegable */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+/* Cambio de color al pasar el mouse por los enlaces del menú */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Mostrar el menú desplegable al pasar el mouse por el contenedor */
+.dropdown:hover .dropdown-content {
+    display: block; /* Muestra el menú cuando se pasa el mouse */
+}
