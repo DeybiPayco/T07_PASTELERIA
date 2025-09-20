@@ -27,9 +27,9 @@
 .carousel-container {
   position: relative;
   width: 100%;
-  max-width: 800px;   /* 👉 el carrusel no ocupa toda la pantalla */
-  height: 350px;      /* 👉 altura adecuada para que se vea completo */
-  margin: 2rem auto;  /* 👉 centrado */
+  max-width: 800px;   /* el carrusel no ocupa toda la pantalla */
+  height: 350px;      /*  altura adecuada para que se vea completo */
+  margin: 2rem auto;  /*  centrado */
   overflow: hidden;
   background: #fff;
   display: flex;

@@ -5,49 +5,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- Tailwind generado -->
   <link href="{{ url_for('static', filename='css/output.css') }}" rel="stylesheet">
-  <!-- Estilos generales -->
   <link href="{{ url_for('static', filename='css/home.css') }}" rel="stylesheet">
-  <!-- Estilos del carrusel -->
   <link href="{{ url_for('static', filename='css/carrusel.css') }}" rel="stylesheet">
 
-  <title>Pastelería Delicias</title>
+  <title>Contacto - Pastelería Delicias</title>
 </head>
 
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="header-inner">
-      <div class="brand">
-        <span class="logo"></span>
-        <h1>Pastelería Delicias</h1>
-      </div>
-      <nav class="nav">
-        <a href="{{ url_for('index') }}">Inicio</a>
-        <a href="{{ url_for('productos') }}">Productos</a>
-        <a href="{{ url_for('contactanos') }}">Contacto</a>
-      </nav>
-      <button class="btn btn-primary">Comprar ahora</button>
+  {% include 'partials/header.html' %}
+
+  <main class="main container">
+    <h2 class="center kicker">Contáctanos</h2>
+    <p class="mt-4 text-center">Puedes escribirnos o llamarnos para hacer tus pedidos.</p>
+
+    <div class="contact-info text-center mt-6">
+      <p>📧 Email: <a href="mailto:info@pasteleriadelicias.com">info@pasteleriadelicias.com</a></p>
+      <p>📞 Teléfono: <a href="tel:5551234567">555-123-4567</a></p>
+      <p>📍 Dirección: Calle Dulce #45, Ciudad Pastel</p>
     </div>
-  </header>
+  </main>
 
+  {% include 'partials/footer.html' %}
 
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <p class="copyright">
-        &copy; 2025 Pastelería Delicias. Todos los derechos reservados.
-      </p>
-      <div class="links">
-        <a href="mailto:info@pasteleriadelicias.com">info@pasteleriadelicias.com</a>
-        <a href="tel:5551234567">Teléfono: 555-123-4567</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- JS del carrusel -->
   <script src="{{ url_for('static', filename='js/carrusel.js') }}"></script>
 </body>
 
