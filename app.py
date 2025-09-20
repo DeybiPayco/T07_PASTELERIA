@@ -1,13 +1,12 @@
 from flask import Flask, render_template ,request, jsonify
 
-#Inicializacion de mi framework flask
+# Inicialización de Flask
 app = Flask(__name__)
 
-
-#rutas
+# Rutas
 @app.route('/')
 def index():
-    return render_template ('index.html')
+    return render_template('index.html')
 
 @app.route("/productos")
 def productos():
@@ -17,6 +16,10 @@ def productos():
 def contactanos():
     return render_template('contactanos.html')
 
-#ejecutar mi servidor
+@app.route('/nosotros')
+def nosotros():
+    return render_template('nosotros.html')
+
+# Ejecutar servidor
 if __name__ == '__main__':
     app.run(debug=True)

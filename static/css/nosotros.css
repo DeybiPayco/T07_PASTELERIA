@@ -1,0 +1,79 @@
+/* Contenedor general */
+.nosotros-container {
+    max-width: 1000px;
+    margin: 120px auto 40px auto; /* margen superior para separar del header */
+    padding: 40px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    line-height: 1.7;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #d63384;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Secciones */
+.section {
+    margin-bottom: 40px;
+}
+
+.section h2 {
+    font-size: 1.8rem;
+    color: #c2185b;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.section p {
+    text-align: justify;
+    font-size: 1rem;
+}
+
+/* Fondo alternado */
+.bg-light {
+    background-color: #fce4ec;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* Lista de valores */
+.valores-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.valores-list li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+/* Adaptabilidad móvil */
+@media (max-width: 768px) {
+    .nosotros-container {
+        margin: 100px 20px 20px 20px;
+        padding: 20px 10px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+}
